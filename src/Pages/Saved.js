@@ -3,18 +3,16 @@ import { useLocation, Link } from "react-router-dom"
 import Props from "../uni";
 
 
-export default function Saved () {
+export default function Saved ({saved}) {
+
+    // function removeitem(c){
+        // use filter
+    // }
+
+    
 
 
-    let saved = useLocation();
-    console.log(saved)
-
-    function removeitem(c){
-        saved.state.delete(c)
-    }
-
-
-    if (saved.state == null){
+    if (saved.length == 0){
 
         return(
             <div>
@@ -33,11 +31,11 @@ export default function Saved () {
                 {saved.state.savedlist.map( x => 
                     <div className="prop" > 
                     <Props
-                        name = {<Link to={`/card/${x.id}`} state={{x}} >{x.name}</Link>}
+                        name = {x.name}
                         url = {x.url}
                         bio = {x.country}                  
                     />
-                    <button className="btnuni" onClick={() => removeitem(x)} >Save</button>
+                    <button className="btnuni" >Save</button>
                         </div>
                         )}
     
@@ -47,6 +45,6 @@ export default function Saved () {
     
             </div>
             
-        )   
+        )
     }
 }

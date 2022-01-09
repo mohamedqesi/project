@@ -208,7 +208,6 @@ const universities = [
 
   function handleClick (c) {
     savedlist.push(c);
-    console.log(savedlist)
   }
 
 
@@ -228,17 +227,22 @@ export default class Home extends Component{
     this.setState({search: event.target.value});
   }
 
+  setSaved([...saved, newThing])
 
-    render(){
+    render({saved, setSaved}){
       return(
         <div>
             <NavBar/>
             <h1>Uni<span style={{ color:"#0071cf" }} >Hub</span></h1>
 
+
             <div className="homepage" >
                 <img src="https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/e96db75d25d9329f74ef913615fc1333" 
                 alt="" width="300px" className="imghome"/>
-                <p className="p-home" >Hello</p>
+                <p className="p-home" >If you want to study in Palestine, then you need to know which of its universities are right for you.<br></br><br></br> Times Higher Education World University Rankings take the 
+                top institutions in the world, and look at their performance across all of their core objectives: teaching, research, knowledge transfer and international outlook.<br></br><br></br>
+                Palestine has 4 universities in the overall Times Higher Education World University Rankings. The highest-ranking university in Palestine is An-Najah National University, which is ranked at number 401–500.
+                <br></br><br></br>Choosing where to study for a degree in Palestine is one of the biggest decisions you will ever make.</p>
             </div>
 
             <div style={{flexDirection: 'row', alignItems: 'center',margin:20}}>
@@ -256,21 +260,28 @@ export default class Home extends Component{
                 
                 {universities.filter( (c) => {if(this.state.search == "") {return(universities)} else if (c.name.toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase())){return (c)} } ).map(
                     c =>
-                    <div className="prop" > <Props
+                    <section>
+                    <div className="prop" >
+                    <Props
                     name = {<Link to={`/card/${c.id}`} state={{c}} >{c.name}</Link>}
                     url = {c.url}
                     bio = {c.country}                  
                     />
 
-                    <Link to="/saved" state={{savedlist}} ><button className="btnuni" onClick={() => handleClick(c)} >Save</button></Link>
+                    <Link to="/saved" state={{savedlist}} ><button className="button" onClick={() => handleClick(c)} >Save</button></Link>
 
                     </div>
+
+                    </section>
+
                 )}
 
                 
                 </div>
 
                   <Footer />
+
+                  <Link to="/login" ><button className="button1" >Login!</button></Link>
 
         
         </div>
