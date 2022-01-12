@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Contact from './Pages/ContactUs';
@@ -10,17 +10,16 @@ import './App.css';
 
 
 function App() {
-  const [saved, setSaved] = useState([])
+
   return (
       <div className="App">
         <Router>
           <Routes>
-            <Route path="/" element={<Home saved={saved} setSaved={setSaved}/>} />
+            <Route path="/" element={<Home/>} />
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/saved" element={<Saved saved={saved} setSaved={setSaved}/>}/>
+            <Route path="/saved" element={<Saved/>}/>
             <Route path="/login" element={<SubmitionForm/>}/>
             <Route path="/card/:id" element={<Card/>}/>
-
           </Routes>
         </Router>
       </div>

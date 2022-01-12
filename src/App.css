@@ -1,7 +1,4 @@
-.App {
-  text-align: center;
-}
-
+/******************      NAV BAR     *****************/
 nav {
   display: flex;
   justify-content: space-around;
@@ -9,116 +6,6 @@ nav {
   min-height: 10vh;
   background: #0071ce;
   color: lightgrey;
-}
-
-.unidiv{
-  background-color: rgb(51, 189, 253);
-  box-shadow: 0 5px 25px rgba(39, 161, 255, 0.92) ;
-  width: 200vh;
-  height: 72vh;
-  border-radius: 50px;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top:30px ;
-  display: inline-block;
-
-}
-
-.text{
-  text-align: left;
-  margin: 50px;
-  
-}
-
-.input{
-  font-size:14pt;
-  background-color: rgba(179, 235, 255, 0.783);
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  border: none;
-  position: relative;
-  margin: 12px;
-  font-size: 14px;
-  border-bottom: 3px solid #008bd6;
-  -webkit-transition: border-color 0.2s ease;
-  transition: border-color 0.2s ease;
-}
-
-.keepintouch{
-  width: 60%;
-}
-
-.unidescription{
-  text-align: left;
-  padding-top: 20px;
-  font-size: 17px;
-}
-
-.uniname{
-  padding-top: 70px;
-}
-
-.uniimg{
-  float: left;
-  margin: 50px;
-  border-radius: 30px;
-  height: 300px;
-  min-width: 500px ;
-}
-
-.nameofuni{
-  font-size: 23px;
-}
-
-.login{
-  background-color: rgb(51, 189, 253);
-  box-shadow: 0 5px 25px rgba(39, 161, 255, 0.92) ;
-  width: 200vh;
-  height: 76vh;
-  border-radius: 50px;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top:30px ;
-  display: inline-block;
-
-}
-
-.p_info{
-  float: right;
-  width: 45%;
-}
-
-.nameage {
-  margin: 53px;
-  text-align: justify;
-  color: rgb(255, 255, 255);
-}
-
-
-.joinourcommunity{
-  font-size: 40px;
-  padding: 20px;
-  text-align: center;
-}
-
-.inputsf{
-
-  float: left;
-  margin-left: 50px;
-
-}
-.submissionformInput{
-  font-size: 20px;
-  color: red;
-  text-align: left;
-  margin-top: 20px;
-
 }
 
 .navLinks {
@@ -131,66 +18,249 @@ nav {
   
 }
 
-.imghome {
-  float: left;
-  margin-left: 150px;
-  border-radius: 50%;
-  
-}
+/******************************FINISHED OF NAV BAR***************************************/
 
-.uniarea{
-  position: relative;
-}
+/***********************     HOME PAGE     ***********************/
 
-.p-home {
-  margin-top: 30px;
-  float: right;
-  margin-right: 150px;
-  text-align: left;
-  width: 40%;
-}
-
-.homepage {
-
-  height: 60vh;
-}
-
-.btnuni{
-  margin: 15px;
-}
-
-*{
-  scroll-behavior: smooth;
-}
-
-.imgofprop{
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-.prop{
-  box-sizing: border-box;
-  width: 380px;
-  height: 390px;
-  box-shadow: 0 5px 25px rgba(111, 54, 255, 0.7) ;
-  margin:30px;
-  border-radius: 15px;
-  flex-direction: row;
-  float: left;
-  background-color: #fff;
-}
-
-.divall{
-  /*background-color:#e5ebea;*/
+.main{
+  min-width: 79vh;
+  min-height: 78vh;
+  padding-top: 10px;
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/56f2e89391f9f8d57e518a73e4d56001");
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
-  width: 100%;
-  height: 100vh;
+  background-position: center;
+  text-align: right;
 }
 
-.h4h{
+.main h2{
+  color: #ffffff;
+
+  padding-right: 150px;
+  padding-top: 50px;
+}
+
+.main h2 span{
+  display: inline-block;
+  padding-top: 30px;
+  font-size: 80px;
+  color: #008bd6;
+}
+
+.main p{
+  color: #ffffff;
+  padding-right: 150px;
+  float: right;
+}
+
+.universitiesArea{
+  position: relative;
+  text-align: center;
+}
+
+.uniword{
   font-size: 50px;
 }
+
+.uni-search{
+  display: flex;
+}
+
+.search{
+  display: flex;
+  align-self: center;
+  height: 25px;
+  width: 300px;
+}
+
+/*****************************FINISH OF HOME PAGE!***********************************/
+
+/*********************     LOGIN PAGE      ************************************/
+
+.loginBackgroundforall{
+  width: 222.11vh;
+  height: 100vh;
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/331f968e6f7dcaf51a87d3aba977bd08");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upperImage{
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/c8c6de388f5b2cd954530534b4e04ab7");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 222.1vh;
+  height: 20vh;
+}
+
+.loginWelcome{
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-input{
+  font-size:14pt;
+  background-color: rgba(255, 235, 235, 0.783);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+  position: relative;
+  margin: 12px;
+  font-size: 14px;
+  border-bottom: 4px solid #008bd6;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.buttonoflogin{
+  background-color: #0071ce;
+  border: none;
+  color: white;
+  padding: 10px 160px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  margin-top: 15px;
+}
+
+/***********************FINISH OF LOGIN PAGE*********************************/
+
+/********************     CONTACT US PAGE     ********************************/
+
+.contact-all{
+  width: 100%;
+}
+
+.imgdiv{
+  width: 50%;
+  height: auto;
+  background-image: url("https://ue.ucdavis.edu/sites/g/files/dgvnsk4711/files/styles/sf_landscape_4x3/public/media/images/Bwalya%20Lungu%201.JPG_0.jpg?h=c963c442&itok=bRhtvWh_");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.keepintouch{
+  float: left;
+  width: 50%;
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/331f968e6f7dcaf51a87d3aba977bd08");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-content: center;
+}
+
+.contact-input{
+  width: 300px;
+  font-size:14pt;
+  background-color: rgba(255, 235, 235, 0.783);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+  position: relative;
+  margin: 12px;
+  font-size: 14px;
+  border-bottom: 4px solid #008bd6;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+/**************************FINISH OF CONTACT PAGE********************************/
+
+/*******************     SAVED LIST PAGE     **********************************/
+
+.savedBG{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/331f968e6f7dcaf51a87d3aba977bd08");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.savedCN{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+/*****************FINISH OF SAVED PAGE***************************/
+
+/******************     CARD PAGE       *************************/
+
+.cardBG{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-image: url("https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/eb8a68d1256bb615c019deff1bd7e786");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.imgSpace{
+  width: 550px;
+  height: 800px;
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 17px;
+  text-align: center;
+}
+
+.uniimg{
+  height: 300px;
+  width: 550px ;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+}
+
+.disofuniSpace{
+  width: 730px;
+  height: 800px;
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 30px;
+  border-radius: 17px;
+  text-align: center;
+}
+
+.uniname{
+  font-size: 50;
+  padding-top: 20px;
+  color: #0071ce;
+}
+
+.unidescription{
+  text-align: left;
+  padding-top: 20px;
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 15px;
+}
+
+.ratetext{
+  float: left;
+  font-size: 50px;
+}
+
+.rp{
+  letter-spacing: 0.5mm;
+}
+
+.ratestars{
+  float: right;
+  width: 163px;
+  height: 35px;
+}
+
+/**************FINISH OF CARD PAGE********************************/
+
+/******************     FOOTER     *******************************/
 
 .Footer {
   margin-top: 30px;
@@ -206,6 +276,31 @@ nav {
   width: 100%;
 }
 
+/****************FINISH OF FOOTER*******************/
+
+/**************************     PROPS     ********************/
+
+.prop{
+  box-sizing: border-box;
+  width: 380px;
+  height: 390px;
+  box-shadow: 0 5px 25px rgba(111, 54, 255, 0.7) ;
+  margin:35px;
+  border-radius: 15px;
+  flex-direction: row;
+  float: left;
+  background-color: #fff;
+  text-align: center;
+}
+
+.imgofprop{
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/********************     ELEMENTS      *****************/
+
 .button {
   background-color: #0071ce;
   border: none;
@@ -220,42 +315,12 @@ nav {
   border-radius: 12px;
 }
 
-.button1 {
-  background-color: #0071ce;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 20px;
-  cursor: pointer;
-  border-radius: 12px;
-  position: fixed;
-  top: 480px;
-  right: 50px;
+.text{
+  text-align: left;
+  margin: 50px;
 }
 
-
-.search{
-  display: flex;
-  align-self: center;
-  height: 25px;
-  width: 300px;
+.nameofuni{
+  font-size: 23px;
 }
-
-.uni-search{
-  display: flex;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/******************FINISH OF EVERYTHING!!**********************/

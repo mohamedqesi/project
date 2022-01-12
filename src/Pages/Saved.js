@@ -1,23 +1,29 @@
 import NavBar from "../Components/NavBar"
-import { useLocation, Link } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 import Props from "../uni";
 
 
-export default function Saved ({saved}) {
-
-    // function removeitem(c){
-        // use filter
-    // }
-
-    
+export default function Saved () {
 
 
-    if (saved.length == 0){
+    let saved = useLocation();
+
+    function removeitem(c){
+        saved.state.delete(c)
+    }
+
+
+    if (saved.state == null){
 
         return(
             <div>
+                <div className="savedBG" ></div>
+                <div className="savedCN" >
                 <NavBar />
-                <h1>There's No Saved Items</h1>
+                <img src="https://www.superprof.co.nz/images/teachers/teacher-home-teach-how-speak-hindi-for-tjose-who-are-hindi-persons.jpg" width="300px" height="300px" style={{marginTop:70}} alt="" />
+                <h2>You didn't save anything my brodaa</h2>
+                </div>
+
             </div>
 
             )
@@ -25,9 +31,11 @@ export default function Saved ({saved}) {
     else{
         return(
             <div>
+                <div className="savedBG" ></div>
+                <div className="savedCN" >
                 <NavBar/>
                 <h1>Saved Items</h1>
-    
+
                 {saved.state.savedlist.map( x => 
                     <div className="prop" > 
                     <Props
@@ -35,16 +43,15 @@ export default function Saved ({saved}) {
                         url = {x.url}
                         bio = {x.country}                  
                     />
-                    <button className="btnuni" >Save</button>
+                    <button className="button" onClick={() => removeitem(x)} >Save</button>
                         </div>
                         )}
-    
-                    <Link to="/" ><button className="button1" >Go To Home</button></Link>
-    
-                
-    
+
+                </div>
+
+
             </div>
-            
-        )
+
+        )   
     }
 }

@@ -6,18 +6,34 @@ export default function Card () {
 
     let item = useLocation();
 
-    console.log(item)
     return(
         <div>
             <NavBar/>
-            <div className="unidiv" >
-                <div>
-                <img className="uniimg" src={item.state.c.url} alt="" width="400pc" />
-                <h1 className="uniname" >{item.state.c.name}</h1>
-                <p className="unidescription" >State: {item.state.c.country}</p>
-                <p className="unidescription" >Description:  {item.state.c.description}</p>
-                <a className="button" href={item.state.c.web_pages} rel="noreferrer" target="_blank" >University Link!</a>
-                <Link to="/" ><button className="button" >Go To Home</button></Link>
+            <div className="cardBG" >
+                
+                <div className="imgSpace">
+
+                    <img className="uniimg" src={item.state.c.url} alt="" width="400pc" />
+                    <h1>{item.state.c.name}</h1>
+                    <a href={item.state.c.url} className="button" target="_blank">University Link!</a>
+                    <Link to="/" className="button" style={{marginRight:30}} >Go to Home</Link>
+                </div>
+
+                <div className="disofuniSpace" >
+                    <h1 className="uniname" >{item.state.c.name}</h1>
+                    <p className="unidescription" >Country: {item.state.c.country}</p>
+                    <p className="unidescription" >Description:  {item.state.c.description}</p>
+                    <div  style={{display:"flex"}} >
+                        <div style={{display:"flex", marginLeft:30, float:"left"}} >
+                            <p className="ratetext" >{item.state.c.rate}</p>
+                            <div style={{marginTop:50, marginLeft:10}} >
+                                <img className="ratestars" src={item.state.c.starsRateUrl} alt="" />
+                                <p className="rp" >Rated by GOOGLE</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
                 </div>
 
 
