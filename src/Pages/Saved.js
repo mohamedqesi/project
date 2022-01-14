@@ -1,3 +1,4 @@
+import React, {useState} from "react";
 import NavBar from "../Components/NavBar"
 import { useLocation } from "react-router-dom"
 import Props from "../uni";
@@ -5,15 +6,11 @@ import Props from "../uni";
 
 export default function Saved () {
 
-
     let saved = useLocation();
+    let [items, setItems] = useState(saved.state)
+    console.log(items)
 
-    function removeitem(c){
-        saved.state.delete(c)
-    }
-
-
-    if (saved.state == null){
+    if ( items === null || items.savedlist.length === 0 ){
 
         return(
             <div>
@@ -29,6 +26,13 @@ export default function Saved () {
             )
     }
     else{
+
+       // let norepeat = ;
+    
+        function removeItem (id) {
+            const updatedSaved = items.savedlist.filter((x) => x.id !== id)
+            setItems({savedlist: updatedSaved})
+            }
         return(
             <div>
                 <div className="savedBG" ></div>
@@ -36,14 +40,17 @@ export default function Saved () {
                 <NavBar/>
                 <h1>Saved Items</h1>
 
-                {saved.state.savedlist.map( x => 
+                {Object.values(items.savedlist.reduce((r,o) => {
+                r[o.id] = o
+                return(r)
+                },{})).map( (x) => 
                     <div className="prop" > 
                     <Props
                         name = {x.name}
                         url = {x.url}
                         bio = {x.country}                  
                     />
-                    <button className="button" onClick={() => removeitem(x)} >Save</button>
+                    <button className="button" onClick={() => removeItem(x.id)} >Delete</button>
                         </div>
                         )}
 

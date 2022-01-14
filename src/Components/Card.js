@@ -15,8 +15,8 @@ export default function Card () {
 
                     <img className="uniimg" src={item.state.c.url} alt="" width="400pc" />
                     <h1>{item.state.c.name}</h1>
-                    <a href={item.state.c.url} className="button" target="_blank">University Link!</a>
-                    <Link to="/" className="button" style={{marginRight:30}} >Go to Home</Link>
+                    <a href={item.state.c.web_pages} className="c-button" target="_blank" rel="noreferrer" >University Link!</a>
+                    <Link to="/" className="c-button" style={{marginRight:30}} >Go to Home</Link>
                 </div>
 
                 <div className="disofuniSpace" >

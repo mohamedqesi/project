@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 /******************      NAV BAR     *****************/
 nav {
   display: flex;
@@ -210,6 +214,7 @@ nav {
   margin-left: 30px;
   border-radius: 17px;
   text-align: center;
+  box-shadow: 0 5px 25px rgba(111, 54, 255, 0.7) ;
 }
 
 .uniimg{
@@ -227,6 +232,7 @@ nav {
   margin-left: 30px;
   border-radius: 17px;
   text-align: center;
+  box-shadow: 0 5px 25px rgba(111, 54, 255, 0.7) ;
 }
 
 .uniname{
@@ -256,6 +262,26 @@ nav {
   float: right;
   width: 163px;
   height: 35px;
+}
+
+.c-button {
+  background-color: #0071ce;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+
+.c-button:hover{
+  background-color: #005fad;
+  transform: scale(1.1);
 }
 
 /**************FINISH OF CARD PAGE********************************/
@@ -291,6 +317,11 @@ nav {
   float: left;
   background-color: #fff;
   text-align: center;
+  transition: 0.4s ease;
+}
+
+.prop:hover{
+  transform: scale(1.06);
 }
 
 .imgofprop{
@@ -313,6 +344,12 @@ nav {
   margin: 20px;
   cursor: pointer;
   border-radius: 12px;
+  transition: 0.7s ease ;
+}
+
+.button:hover{
+  background-color: #005fad;
+  transform: scale(1.1);
 }
 
 .text{
